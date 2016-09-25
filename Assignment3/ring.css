@@ -1,0 +1,244 @@
+/*设置大框在底部中间 以及采用flex模式定位*/
+/*#at-plus-container {
+    position: absolute;
+    left: 46%;
+    bottom: 150px;
+}
+*/
+/*固定position, 同时继续采用flex定位*/
+#bottom-positioner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    height: 40px;
+    width: 40px;
+}
+
+/*当鼠标触发时， 将可触发面积以原位置为中心扩大，
+保证鼠标移至环形列表时（前）， 列表不会缩回*/
+#bottom-positioner:hover {
+    height: 300px;
+    width: 300px;
+}
+
+/*设置button中元素字体*/
+#button {
+    font-family: Vernada, Tahoma, sans-serif;
+}
+
+/*设置info中展开时的位置， 长宽及动画.*/
+#bottom-positioner:hover .info {
+    opacity: 1;
+    -moz-transform: translate(-55px, -170px);
+    -webkit-transform: translate(-55px, -170px);
+    -o-transform: translate(-55px, -170px);
+    transform: translate(-55px, -170px);
+    width: 150px;
+    height: 150px;
+    -moz-transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+
+/*设置info原本的基本信息*/
+.info {
+    position: absolute;
+    opacity: 0;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    -moz-transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+    overflow: hidden;
+}
+
+/*设置info中的图像与字间隔及平齐*/
+.info img {
+    -moz-transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+    margin-right: 10px;
+    vertical-align: middle;
+    -moz-transform: scale(1.3, 1.3);
+    -webkit-transform: scale(1.3, 1.3);
+    -o-transform: scale(1.3, 1.3);
+    transform: scale(1.3, 1.3);
+}
+/*下面4个均设置info中的字的样式，位置*/
+.page {
+    color: white;
+    margin-top : 10px;
+}
+
+.user {
+    font-size: 15pt;
+}
+
+.comment {
+    font-size: 30pt;
+}
+
+.mine {
+    font-size: 20pt;
+    display: inline-block;
+    margin: 0px 2px;
+    color: #079E6E;
+
+}
+
+/*对列表基本样式进行设置*/
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+li {
+    list-style: none;
+    text-align: center;
+}
+
+/*
+    对列表中公有的属性放于button中进行设置：
+    1.圆形及宽高
+    2.居中
+    3.动画0.5s ease-in
+    4.absolute定位
+    5.未hover不可见
+*/
+.button {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: gray;
+    background-repeat: no-repeat;
+    background-position: center;
+    -moz-transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+    opacity: 0;
+    position:absolute;
+}
+/*
+    button： hover可见.
+    */
+#bottom-positioner:hover .button {
+    opacity: 1;
+}
+
+/*分别设置每个按钮的图案及位置*/
+#bottom-positioner:hover .mask {
+    background-image: url("assets/images/nomask.png");
+    -moz-transform: translate(-75px, -45px);
+    -webkit-transform: translate(-75px, -45px);
+    -o-transform: translate(-75px, -45px);
+    transform: translate(-75px, -45px);
+}
+
+
+#bottom-positioner:hover .history {
+    background-image: url("assets/images/history.png");
+    -moz-transform: translate(-90px, 0px);
+    -webkit-transform: translate(-90px, 0px);
+    -o-transform: translate(-90px, 0px);
+    transform: translate(-90px, 0px);
+}
+
+
+#bottom-positioner:hover .message {
+    background-image: url("assets/images/message.png");
+    -moz-transform: translate(-67px, 43px);
+    -webkit-transform: translate(-67px, 43px);
+    -o-transform: translate(-67px, 43px);
+    transform: translate(-67px, 43px);
+}
+
+#bottom-positioner:hover .setting {
+    background-image: url("assets/images/setting.png");
+    -moz-transform: translate(-27px, 70px);
+    -webkit-transform: translate(-27px, 70px);
+    -o-transform: translate(-27px, 70px);
+    transform: translate(-27px, 70px);
+}
+
+
+#bottom-positioner:hover .sign {
+    background-image: url("assets/images/signin.png");
+    -moz-transform: translate(25px, 65px);
+    -webkit-transform: translate(25px, 65px);
+    -o-transform: translate(25px, 65px);
+    transform: translate(25px, 65px);
+}
+#bottom-positioner:hover .unread {
+    opacity: 1;
+}
+/*对unread进行设置*/
+.unread {
+    opacity: 0;
+    float: right;
+    width: 20px;
+    -moz-transform: translate(5px, -5px);
+    -webkit-transform: translate(5px, -5px);
+    -o-transform: translate(5px, -5px);
+    transform: translate(5px, -5px);
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    background-color: red;
+    -moz-transition-delay:  0s;
+    -webkit-transition-delay:  0s;
+    -o-transition-delay:  0s;
+    transition-delay:  0s;
+}
+
+
+
+
+/*设置开始出现的小图标的样式*/
+.apb {
+    -moz-transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+    height: 35px;
+    width: 35px;
+    background-color: #AAAAAA;
+    border-radius: 50%;
+    background-image: url("assets/images/atplus_white.png");
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    -moz-transition-delay: 0.5s;
+    -webkit-transition-delay: 0.5s;
+    -o-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+}
+
+#bottom-positioner:hover .apb {
+    -moz-transform: scale(1.7, 1.7);
+    -webkit-transform: scale(1.7, 1.7);
+    -o-transform: scale(1.7, 1.7);
+    transform: scale(1.7, 1.7);
+    background-color: rgb(48, 63, 159) !important;
+    background-image: url("assets/images/atplus_green.png");
+    -moz-transition-delay: 0s;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
