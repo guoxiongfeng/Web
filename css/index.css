@@ -1,0 +1,42 @@
+h1 {
+    margin: 10px 60px !important;
+    height: auto;
+    font-size: 22pt;
+    text-align: center;
+    background-color: black;
+    color: white !important;
+    border-radius: 10px 10px 10px 10px;
+}
+
+a {
+    margin-bottom: 15px !important;
+}
+
+.Contain {
+    margin: 5px 70px;
+}
+
+body {
+    background-image: url("http://www.pptbz.com/pptpic/UploadFiles_6909/201105/2011051707485977.jpg");
+    background-size: 100%;
+}
+
+.well {
+    opacity: 0.7
+}
+
+.intro {
+    font-size: 15pt;
+    color: #AA00FF;
+}
+
+.signature {
+    width: 50px;
+    height: 30px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #6600CC;
+    color: black;
+    text-align: center;
+}
