@@ -1,0 +1,123 @@
+
+/*尝试调整渲染顺序达到指定边框*/
+body {
+	width: 100%;
+	height: 100%;
+}
+.container {
+	width: 100%;
+	height: 750px;
+	background-color: white;
+	margin: 0 auto;
+}
+
+
+#maze {
+	position: relative;
+	width: 550px;
+	height: 350px;
+	margin: 30px auto;
+	
+	
+}
+.obstancle {
+	/*border-style: */
+	position: absolute;
+	background-color: #999999; /*rgb(238, 238, 238)*/
+	overflow: hidden;
+}
+
+
+.left_top {
+	width: 150px;
+	height: 250px;
+}
+.mid_top {
+	width: 100%;
+	height: 60px;
+}
+.right_top {
+	right: 0;
+	width: 150px;
+	height: 250px;
+}
+.bottom {
+	bottom: 0;
+	width: 100%;
+	height: 40px;
+}
+
+.bottom_mid {
+	top: 120px;
+	left: 210px;
+	width: 130px;
+	height: 190px;
+}
+
+
+/*-------------------------------------*/
+
+#start {
+	position: absolute;
+	top: 255px;
+	width: 50px;
+	height: 50px;
+	background-color: rgb(130, 255, 130);
+	border: black solid 1px;
+}
+
+#end {
+	position: absolute;
+	top: 255px;
+	right: 0;
+	width: 50px;
+	height: 50px;
+	background-color: rgb(133, 133, 255);
+	border: black solid 1px;
+
+}
+
+.text-set {
+	margin: 0 15px;
+	font-size: 30pt;
+	font-weight: bold;
+}
+
+
+/*--------------------------------------------------------*/
+#front {
+	text-align: center;
+	width: auto;
+	margin: 0 auto;
+}
+.ti {
+	font-size: 25pt;
+	font-weight: bold;
+}
+.ins {
+	font-size: 20pt;
+
+}
+#hit {
+	font-size: 20pt;
+	opacity: 0;
+	transition : 0.5s;
+}
+.guide {
+	margin: 0 auto;
+	font-size: 16pt;
+	width: 800px;
+}
+.sample {
+	margin: 20px auto;
+	border: black solid 1px;
+	width: 130px;
+	height: 30px;
+	background-color: #999999;/*rgb(238, 238, 238)*/
+}
+
+/*
+主要干Css
+核对一下js有没有不足的细节
+边框的问题
+*/
